@@ -7,17 +7,18 @@
   --taupe: #977b63;
   --brown: #704c34;
   --espresso: #45352b;
-  --font-body: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,
+  --font-body:
+    Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,
     sans-serif;
-  --font-heading:Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  font-size: 16px;
+  --font-heading: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  font-size: 17px;
 }
 
 body {
   margin: 0;
   background-color: var(--cream);
   color: var(--espresso);
-  font-family:var(--font-body);
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -26,12 +27,14 @@ h1,
 h2,
 h3 {
   color: var(--brown);
-  font-family: var(--font-heading)
+  font-family: var(--font-heading);
   line-height: 1.2;
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  color: var(--espresso);
 }
 
 h2 {
@@ -39,11 +42,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom:.25em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.25em;
+  line-height: 1.2;
 }
 
 a {
@@ -58,7 +67,9 @@ a:hover {
 
 header {
   background-color: var(--espresso);
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 nav ul {
@@ -67,8 +78,9 @@ nav ul {
   justify-content: center;
   gap: 1rem 2rem;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem 0;
   list-style: none;
+  background: var(--brown);
 }
 
 nav a {
@@ -90,22 +102,26 @@ main {
 }
 
 aside {
-  padding: 1.5rem 1rem;
+  padding: 0 1.5rem;
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 p {
   max-width: 70ch;
-  margin:.25em 0 .75em;
+  margin: 0.25em 0 0.75em;
 }
 
 img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+img {
+  object-fit: cover;
 }
 
 figure {
@@ -151,21 +167,23 @@ textarea {
   font: inherit;
 }
 
-button, .btn {
-  background-color: var(--brown);
+button,
+.btn {
+  background-color: var(--espresso);
   color: var(--cream);
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   border: none;
   border-radius: 1rem;
-  font-size:1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  font-family:var(--font-heading);
+  font-family: var(--font-heading);
   cursor: pointer;
-  margin-top:.5em;
+  margin-top: 0.5em;
 }
 
-button:hover, .btn:hover {
-  background-color: var(--espresso);
+button:hover,
+.btn:hover {
+  background-color: var(--brown);
 }
 
 a:focus-visible,
@@ -184,6 +202,7 @@ footer {
   color: var(--cream);
   text-align: center;
   padding: 1.5rem;
+  margin-top: 5rem;
 }
 
 footer p {
@@ -192,26 +211,30 @@ footer p {
 
 /* Specific Styles */
 .btn {
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
+}
+
+.site-logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cream);
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 /* Larger screens */
 
 @media (min-width: 960px) {
-  body {
-    font-size:1.2rem;
+  :root {
+    font-size: 18px;
   }
+
   main {
     padding: 3rem 2rem;
-  }
-
-  aside {
-    padding: 3.5rem 1.5rem;
-  }
-
-  section {
-    margin-bottom: 4rem;
+    font-size: 1.1rem;
   }
 
   .cols {
@@ -226,7 +249,12 @@ footer p {
     flex: 2;
   }
 
-  .col-1, .col-2 {
+  .cols aside {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .col-1,
+  .col-2 {
     min-width: 0;
   }
 
