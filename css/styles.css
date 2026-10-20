@@ -1,0 +1,237 @@
+/* North Star Bakery Styles v1.0 */
+
+/* Branding */
+:root {
+  --cream: #f6efe9;
+  --oat: #e1cfbc;
+  --taupe: #977b63;
+  --brown: #704c34;
+  --espresso: #45352b;
+  --font-body: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,
+    sans-serif;
+  --font-heading:Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--espresso);
+  font-family:var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--brown);
+  font-family: var(--font-heading)
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom:.25em;
+}
+
+a {
+  color: var(--brown);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Header and navigation */
+
+header {
+  background-color: var(--espresso);
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+aside {
+  padding: 1.5rem 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+p {
+  max-width: 70ch;
+  margin:.25em 0 .75em;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 1.5rem 0;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+audio {
+  max-width: 100%;
+}
+
+/* Forms */
+
+fieldset {
+  border: 1px solid var(--taupe);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  border: 1px solid var(--taupe);
+  border-radius: 4px;
+  font: inherit;
+}
+
+button, .btn {
+  background-color: var(--brown);
+  color: var(--cream);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size:1.25rem;
+  font-weight: bold;
+  font-family:var(--font-heading);
+  cursor: pointer;
+  margin-top:.5em;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--espresso);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brown);
+  outline-offset: 3px;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--espresso);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+/* Specific Styles */
+.btn {
+  display:inline-block;
+  text-decoration: none;
+}
+
+/* Larger screens */
+
+@media (min-width: 960px) {
+  body {
+    font-size:1.2rem;
+  }
+  main {
+    padding: 3rem 2rem;
+  }
+
+  aside {
+    padding: 3.5rem 1.5rem;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  .cols {
+    display: flex;
+    gap: 1.5em;
+  }
+  .col-1 {
+    flex: 1;
+  }
+
+  .col-2 {
+    flex: 2;
+  }
+
+  .col-1, .col-2 {
+    min-width: 0;
+  }
+
+  .main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
