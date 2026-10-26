@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Custom Cake Calculator | North Star Bakery</title>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="site-logo">North Star Bakery</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-tablet">
+
+    <section>
+      <h1>Custom Cake Calculator</h1>
+      <p>
+        <strong>Planning a celebration?</strong> Customize your cake below to get an estimated price for your order.
+      </p>
+
+      <form id="cake-form">
+        <p id="cake-intro-message" class="msg"></p>
+        <fieldset>
+          <legend>Customize Your Cake</legend>
+
+          <p>
+            <label for="cake-name">Cake Name / Occasion (optional)</label>
+            <input type="text" id="cake-name" name="cake-name" maxlength="60" placeholder="e.g., Olivia's Birthday Cake">
+          </p>
+          <p>
+            <label for="cake-size">Cake Size</label>
+            <select id="cake-size" name="cake-size" required>
+              <option value="6">6-inch</option>
+              <option value="8">8-inch</option>
+              <option value="10">10-inch</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="cake-flavor">Cake Flavor</label>
+            <select id="cake-flavor" name="cake-flavor" required>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="red-velvet">Red Velvet</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="cake-frosting">Frosting</label>
+            <select id="cake-frosting" name="cake-frosting" required>
+              <option value="vanilla">Vanilla Buttercream</option>
+              <option value="chocolate">Chocolate Buttercream</option>
+              <option value="cream-cheese">Cream Cheese</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="cake-quantity">Quantity</label>
+            <input type="number" id="cake-quantity" name="cake-quantity" min="1" max="5" value="1" required>
+            <span id="error-cake-quantity" class="msg msg-error"></span>
+          </p>
+        </fieldset>
+
+        <h3>
+          <strong>Estimated Total:</strong>
+          <output id="cake-total" for="cake-size cake-flavor cake-frosting cake-quantity">
+            $0.00
+          </output>
+        </h3>
+        <div class="buttons cols">
+          <button type="button" id="save-cake" class="btn col-1">
+            Save My Cake
+          </button>
+          <button type="button" id="clear-cake" class="btn btn-outline col-1">
+            Clear My Cake
+          </button>
+        </div>
+
+        <p id="cake-save-message" role="status" class="msg"></p>
+      </form>
+      <hr class="hr-sm">
+      <p><em>Estimated pricing only. </em>Final pricing and availability will be confirmed by our bakery team. <a href="contact.html">Visit our Contact page</a> to request your custom cake.</p>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 North Star Bakery</p>
+  </footer>
+  <script src="scripts/custom-cake.js"></script>
+</body>
+
+</html>
