@@ -297,6 +297,10 @@ hr {
   color: darkred;
   display: inline-block;
 }
+
+.msg-error:empty {
+  display: none;
+}
 /* Larger screens */
 
 @media (min-width: 960px) {
