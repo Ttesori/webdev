@@ -37,18 +37,20 @@
           about custom cakes, or send us a general question.
         </p>
 
-        <form action="#" method="get">
+        <form action="#" method="get" id="contact-form" novalidate>
           <fieldset>
             <legend>Your Contact Information</legend>
 
             <p>
               <label for="name">Name (required)</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" minlength="2" aria-describedby="name-error" required>
+              <span id="name-error" class="msg-error"></span>
             </p>
 
             <p>
               <label for="email">Email (required)</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+              <span id="email-error" class="msg-error"></span>
             </p>
           </fieldset>
 
@@ -57,11 +59,12 @@
 
             <p>
               <label for="request-type">Request Type (required)</label>
-              <select id="request-type" name="request-type" required>
+              <select id="request-type" name="request-type" required aria-describedby="request-type-error">
                 <option value="">Choose an option</option>
                 <option value="preorder">Pre-Order</option>
                 <option value="question">General Question</option>
               </select>
+              <span id="request-type-error" class="msg-error"></span>
             </p>
 
             <p>
@@ -71,7 +74,8 @@
 
             <p>
               <label for="item-details">Item Details (required)</label>
-              <textarea id="item-details" name="item-details" rows="5" required placeholder="Tell us what you'd like to order or ask us a question."></textarea>
+              <textarea id="item-details" name="item-details" rows="5 aria-describedby=" item-details-error" required placeholder="Tell us what you'd like to order or ask us a question." minlength="10"></textarea>
+              <span id="item-details-error" class="msg-error"></span>
             </p>
 
             <p>
@@ -121,6 +125,7 @@
   <footer>
     <p>&copy; 2026 North Star Bakery</p>
   </footer>
+  <script src="scripts/contact-validation.js"></script>
 </body>
 
 </html>
